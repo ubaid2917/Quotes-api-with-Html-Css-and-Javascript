@@ -59,7 +59,6 @@
       ? (author.innerText = "Unknown")
       : (author.innerText = `${quotesData.author}`);
 
-    // console.log(realData[rnum].author)
   };
   const getQuotes = async () => {
     const api = "https://type.fit/api/quotes";
@@ -68,8 +67,6 @@
       realData = await data.json();
 
       getNewQuotes();
-      //    console.log(realData.length)
-      //    console.log(realData[0].author)
     } catch (error) {}
   };
   newQuotes.addEventListener("click", getNewQuotes);
